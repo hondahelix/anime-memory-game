@@ -1,11 +1,9 @@
 
-
 function Header(){
     return (
-        <div className="jumbotron jumbotron-fluid">
+        <div className="jumbotron jumbotron-fluid" style={{backgroundImage: "url(https://wallpaperaccess.com/full/1915194.jpg)"}}>
             <div className="container">
-                <h1 className="display-4">Anime Memory Game!</h1>
-                <p className="lead">Click on an image to earn points, but don't click on any more than once!</p>
+                <h1 className="display-4 text-center " style={{fontWeight: "bold"},{color: "blue"}}>Anime Memory Game!</h1>
             </div>
         </div>
     );

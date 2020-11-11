@@ -1,9 +1,8 @@
-import Navbar from "./components/Navbar";
+import CardGame from "./components/CardGame";
 
 function App() {
-  return (
-    <Navbar/>
-  );
+  return <CardGame/>;
+
 }
 
 export default App;

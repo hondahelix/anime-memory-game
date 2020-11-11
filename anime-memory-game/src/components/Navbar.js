@@ -2,10 +2,10 @@
 
 function Navabar(props){
     return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-light bg-light fixed-top">
         <span className="navbar-brand mb-0 h1">Anime Memory Game</span>
-        <li>Click an Image to Begin!</li>
-        <li>`Score: ${props.score} | Top Score: ${props.topScore}`</li> 
+        <li>{props.updateUser}</li>
+        <li>Score: {props.score} | Top Score: {props.topScore}</li> 
     </nav>
     );
 };
