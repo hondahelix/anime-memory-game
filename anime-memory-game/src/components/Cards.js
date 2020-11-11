@@ -1,4 +1,5 @@
-//style="width: 18rem;"
+import React from "react";
+
 function Cards(props){
     return(
         <div className = "container">
