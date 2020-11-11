@@ -9,8 +9,15 @@ class CardGame extends Component {
       score: 0,
       updateUser: "Click an Image to Begin!",
       cardData: CardInfo,
-      clicked: []
+      clicked: [],
+      gameLost: false
     };
+    resetGame = function(){
+        this.setState({score: 0});
+        this.setState({updateUser: "Click an Image to Begin!"});
+        this.setState({clicked: []});
+        this.setState({gameLost: false});
+    }
     setScores = function(){
         if(this.state.score>=this.state.highScore){
             this.setState({highScore: this.state.score+1});
@@ -24,9 +31,13 @@ class CardGame extends Component {
         event.preventDefault();
         var clickedId = event.target.id;
         //console.log(event.target.id);
-        if(this.state.clicked.includes(clickedId)){
+        if(this.state.gameLost === true){
+            this.resetGame();
+        }
+        else if(this.state.clicked.includes(clickedId)){
             // change to wrong for update user and restart also shuffle cards
             this.setState({updateUser: "You guessed incorrectly!"});
+            this.setState({gameLost: true});
             //need to reset the count but keep the high score
         }
         else{
@@ -42,7 +53,7 @@ class CardGame extends Component {
       };
     render(){
         return(
-            <div>
+            <div style={{backgroundColor: "gray"}}>
                 <Navbar score={this.state.score} topScore={this.state.highScore} updateUser = {this.state.updateUser}/>
                 <Header />
                 <Cards cardData = {this.state.cardData} handleClick = {this.handleClick}/>
