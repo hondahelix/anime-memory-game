@@ -1,8 +1,10 @@
 import Header from "./Header";
 import Navbar from "./Navbar";
 import Cards from "./Cards";
+import Footer from "./Footer";
 import React, { Component } from "react";
 import CardInfo from "./cards.json";
+
 class CardGame extends Component {
     state = {
       highScore: 0,
@@ -35,10 +37,8 @@ class CardGame extends Component {
             this.resetGame();
         }
         else if(this.state.clicked.includes(clickedId)){
-            // change to wrong for update user and restart also shuffle cards
             this.setState({updateUser: "You guessed incorrectly!"});
             this.setState({gameLost: true});
-            //need to reset the count but keep the high score
         }
         else{
             this.state.clicked.push(clickedId);
@@ -57,6 +57,7 @@ class CardGame extends Component {
                 <Navbar score={this.state.score} topScore={this.state.highScore} updateUser = {this.state.updateUser}/>
                 <Header />
                 <Cards cardData = {this.state.cardData} handleClick = {this.handleClick}/>
+                <Footer/>
             </div>
         );
     }
