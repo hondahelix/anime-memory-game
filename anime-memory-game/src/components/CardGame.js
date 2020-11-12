@@ -32,7 +32,6 @@ class CardGame extends Component {
     handleClick = event => {
         event.preventDefault();
         var clickedId = event.target.id;
-        //console.log(event.target.id);
         if(this.state.gameLost === true){
             this.resetGame();
         }
@@ -42,14 +41,10 @@ class CardGame extends Component {
         }
         else{
             this.state.clicked.push(clickedId);
-            //console.log(this.state.clicked);
             this.setState({updateUser: "You guessed correctly!"});
             this.shuffleCards();
             this.setScores();
         }
-
-        //console.log(this.state.clicked);
-
       };
     render(){
         return(

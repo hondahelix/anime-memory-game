@@ -6,7 +6,7 @@ function Cards(props){
             <div className="row row-cols-4">
                 { props.cardData.map( card =>
                 <div  key={card.id} className="card" onClick = {props.handleClick} style={{ width: '10rem'}}>
-                    <img id = {card.id} src={card.image} className="card-img-top" alt={card.name}/>
+                    <img id = {card.id} src={card.image} className="card-img-top" style= {{backgroundPosition: "cover"}} alt={card.name}/>
                 </div>)}
             </div>
             <br></br>
