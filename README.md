@@ -20,7 +20,7 @@ in the termnal and then go to the browser and type in http://localhost:3000.
 
 
 ## Usage 
-The usage of this app is to test your memory. The navbar will display if you clicked on the right card and will dynamically update to show you progression in the game!!! Play with your friends to see who gets the high score!!
+The usage of this app is to test your memory. The navbar will display if you clicked on the right card and will dynamically update to show you progression in the game!!! Play with your friends to see who gets the high score!! See the app in action here [anime memory game](https://hondahelix.github.io/memory-game/)
 
 
                             code
