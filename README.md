@@ -26,11 +26,11 @@ The usage of this app is to test your memory. The navbar will display if you cli
 
                             code
 
-![code highlight]()
+![code highlight](readMeImages/code.PNG)
 
                             app demo
 
-![app]()
+![app](readMeImages/demo.gif)
 
    
 ## Credits
